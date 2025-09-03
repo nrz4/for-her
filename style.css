@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 50%, #f48fb1 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.music-player {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow: 0 25px 50px rgba(248, 187, 208, 0.2), 0 0 30px rgba(252, 228, 236, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 2px solid rgba(248, 187, 208, 0.2);
+}
+
+.player-header h1 {
+    color: #B19CD9;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 0 2px 4px rgba(177, 156, 217, 0.2);
+}
+
+.album-cover-container {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.album-cover {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(248, 187, 217, 0.3);
+}
+
+.album-cover.flipped {
+    transform: rotateY(180deg);
+}
+
+.album-front,
+.album-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.album-front {
+    z-index: 2;
+}
+
+.album-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, #f8bbd9, #f48fb1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.album-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.back-text {
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.4;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    word-wrap: break-word;
+    min-height: 120px;
+    max-height: 160px;
+    overflow-y: auto;
+}
+
+.back-text:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.back-text::-webkit-scrollbar {
+    width: 4px;
+}
+
+.back-text::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+
+.back-text::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.track-info {
+    margin-bottom: 30px;
+}
+
+.track-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #B19CD9;
+    margin-bottom: 5px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.track-artist {
+    font-size: 18px;
+    color: #B19CD9;
+    font-style: normal;
+    font-family: 'Dancing Script', cursive;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.time {
+    font-size: 14px;
+    color: #B19CD9;
+    min-width: 35px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #f8bbd9, #f48fb1, #ec407a);
+    border-radius: 3px;
+    width: 0%;
+    transition: width 0.3s ease;
+    box-shadow: 0 2px 8px rgba(248, 187, 217, 0.3);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    color: #B19CD9;
+}
+
+.control-btn:hover {
+    background: rgba(248, 187, 217, 0.15);
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(248, 187, 217, 0.2);
+}
+
+.play-pause {
+    font-size: 30px;
+    background: linear-gradient(135deg, #f8bbd9, #f48fb1, #ec407a);
+    color: white;
+    padding: 15px;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(248, 187, 217, 0.3);
+}
+
+.play-pause:hover {
+    background: linear-gradient(135deg, #f48fb1, #ec407a, #f8bbd9);
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(248, 187, 217, 0.4);
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.volume-icon {
+    font-size: 18px;
+}
+
+.volume-slider {
+    width: 100px;
+    height: 4px;
+    background: #f8bbd9;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(135deg, #f8bbd9, #f48fb1);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(248, 187, 217, 0.3);
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(135deg, #f8bbd9, #f48fb1);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 8px rgba(248, 187, 217, 0.3);
+}
+
+@media (max-width: 480px) {
+    .music-player {
+        padding: 20px;
+    }
+    
+    .controls {
+        gap: 15px;
+    }
+    
+    .control-btn {
+        font-size: 20px;
+        padding: 8px;
+    }
+    
+    .play-pause {
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+    }
+}
