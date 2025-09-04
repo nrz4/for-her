@@ -7,15 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="music-player">
+    <!-- Start Screen -->
+    <div class="start-screen" id="startScreen">
+        <div class="start-content">
+            <h1>For Tanya 💕</h1>
+            <button class="start-button" id="startButton">Begin</button>
+        </div>
+    </div>
+
+    <div class="music-player" id="musicPlayer" style="display: none;">
         <div class="player-header">
-            <h1>Simple Music Player</h1>
+            <h1>tanyuhhhhh + nixon :)</h1>
         </div>
         
         <div class="album-cover-container">
             <div class="album-cover" id="albumCover">
                 <div class="album-front">
-                    <img src="pics/IMG_6541.jpg" alt="Album Cover" id="albumImage">
+                    <img src="pics/pt1.jpg" alt="Album Cover" id="albumImage">
                 </div>
                 <div class="album-back">
                     <div class="back-text" contenteditable="true" id="backText">
@@ -25,6 +33,7 @@
                     </div>
                 </div>
             </div>
+            <div class="clickable-hint">💡 Click album to read story</div>
         </div>
         
         <div class="track-info">
@@ -47,12 +56,12 @@
         </div>
         
         <div class="volume-container">
-            <span class="volume-icon">🔊</span>
+            <span class="volume-icon">💗</span>
             <input type="range" class="volume-slider" min="0" max="100" value="50">
         </div>
         
         <audio id="audioPlayer">
-            <source src="songs/7 rings.mp3" type="audio/mpeg">
+            <source src="spotify-songs/SpotiDownloader.com - tanya (1)/Slow Motion (feat. Wizkid).mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>

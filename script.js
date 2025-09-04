@@ -17,218 +17,114 @@ class MusicPlayer {
 
         this.isPlaying = false;
         this.currentTrack = 0;
+        this.albumClickedOnce = false;
         
-        // Ariana Grande tracks
+        // Spotify tracks with personalized stories
         this.tracks = [
             {
-                title: "7 rings",
-                artist: "Ariana Grande",
-                src: "songs/7 rings.mp3"
+                title: "Slow Motion (feat. Wizkid)",
+                artist: "Don Toliver, Wizkid",
+                src: "spotify-songs/SpotiDownloader.com - tanya (1)/Slow Motion (feat. Wizkid).mp3",
+                albumImage: "pics/pt1.jpg",
+                story: "Grand Rising Tanya! You prolly like what the fuck is this. And honestly Idk what I'm really doing either. But all I know is that this is my grand way of asking you a question! But unfortunately you are going to have to wait till the end. Until we get there… I coded this project up for you because I just wanted to take you on a journey through some songs. Talk a little about them and create a beautiful story. I wanted to start with Slow Motion because it was the song that you put me on very very very early on. When we first met. I don't know if it was from a story or reel, but all I knew is that I loved this song because you did. Just like the flowers in the pic! It was also the very first set of flowers I gave you. Aka the start of everything. Hope you enjoy and onto the next song!!!"
             },
             {
-                title: "34+35",
+                title: "Sometimes",
                 artist: "Ariana Grande",
-                src: "songs/34+35.mp3"
+                src: "spotify-songs/SpotiDownloader.com - tanya (1)/Sometimes.mp3",
+                albumImage: "pics/pt2.jpg",
+                story: "Oh Ariana Grande. You favorite artist! And one of my favorite songs. I remember when we went on a break, this is the song I blasted in my eardrums when I would be driving and at the gym. Throughout that whole break, you never left my mind (not even sometimes haha). I knew from that that you weren't some girl that I met, you were someone I saw forever with ever since that first date (which is what the pic is in case you forgot). Probably my favorite date I have ever been in. With those fuck ass gigantic ass big booty ass drinks. Everything was hectic but with you everything seemed so calm and amazing. Anyways, enjoy Arianna's angelic voice. Collect these moments. Create them as tattoos on your mind. And get ready for the next song!!!"
             },
             {
-                title: "34+35 Remix (feat. Doja Cat, Megan Thee Stallion)",
-                artist: "Ariana Grande",
-                src: "songs/34+35 Remix (feat. Doja Cat, Megan Thee Stallion) - Remix.mp3"
+                title: "Loco",
+                artist: "Neton Vega",
+                src: "spotify-songs/SpotiDownloader.com - tanya (1)/Loco.mp3",
+                albumImage: "pics/pt3.JPG",
+                story: "This song I was soooo shocked you knew and I didn't (cuz it was a latin song). I was like ain't no way this gorgeous ass Indian girl got some sazón (seasoning) in her. But very quickly I learned that you knew a bunch more and you were culturedddd. Period. I'm sorry if this isn't a cutesy story, but I do think that being able to connect w my Latin side is something very important and attractive to me. And despite your ethnicity, you were able to do just that. Another way you showed that was just bonding with my hometown friends even when everyone hispanic asf and hispanic music was playing at that y2k party. So kinda connected it with this pic 🤞🏽. Onto the next one!!!"
             },
             {
-                title: "Baby I",
-                artist: "Ariana Grande",
-                src: "songs/Baby I.mp3"
+                title: "luther (with sza)",
+                artist: "Kendrick Lamar, SZA",
+                src: "spotify-songs/SpotiDownloader.com - tanya (1)/luther (with sza).mp3",
+                albumImage: "pics/pt4.jpg",
+                story: "You prolly thinking why tf is this mf Jonathan in this pic 🤣. Wait wait wait give me some time to explain. So Luther reminds me of that lil bonding moment we had when we were watching the Super Bowl at the same time. Even though I was watching it with Jonathan and you were watching at your hostess job with all those drunk white old dudes, I felt like you were right there with me. I KNOW THAT MAY OF SOUNDED WEIRD. But the way we were just talking about it with each other, debating on what the hell was going on, and you convincing me that it was actually historical was really cool to me. And rememorable asf. I miss those types of convos with you. I miss you. anyways hope you enjoy and hit them strictly with that fye. ONTO THE NEXT SONGGGG !!!!"
             },
             {
-                title: "Bad Decisions",
-                artist: "Ariana Grande",
-                src: "songs/Bad Decisions.mp3"
+                title: "A Lonely Night",
+                artist: "The Weeknd",
+                src: "spotify-songs/SpotiDownloader.com - tanya (1)/A Lonely Night.mp3",
+                albumImage: "pics/pt5.JPG",
+                story: "This is like a two parter. so pt. 1! YOU PUT ME ON TO THESE TWO SONGSSS FRRRR. Idk if you remember but we were getting ready to sleep in your old dorm and this song popped up I was like wtffff this is good asf and I am a The Weeknd fan so I was shocked that I didn't know. Which is like another like damn this girl just keeps shocking me. Anyways, while we were getting ready to sleep you were taking care of my skin, telling me what to put on, taking some blackheads off, and just telling me random facts about skin. I would perhaps argue that this is my favorite interest that you have that attracts me to you. And while this song was playing, I really like how you were like if you like that then you'd like this… (pt.2 is next!!) (that last sentence made no sense, hope you can understand me lmfao)"
             },
             {
-                title: "bad idea",
-                artist: "Ariana Grande",
-                src: "songs/bad idea.mp3"
+                title: "Love To Lay",
+                artist: "The Weeknd",
+                src: "spotify-songs/SpotiDownloader.com - tanya (1)/Love To Lay.mp3",
+                albumImage: "pics/pt6.jpg",
+                story: "FIRE FIRE FIRE FIRE FIRE. RAHRAHESHEAH. LELELELLELE. SHE LOVE TO LAY FRRR. Same night, same moment as pt. 1. It was sooo gooood. (if ima be real idk if i switched these two songs but regardlesssss). It was a song that I took with me and I still listen to to this day. I miss these nights and I would do anything to go back to doing skin care alongside you. Anyways enjoy the rest of this song and onto the nextttttt !!!!"
             },
             {
-                title: "Bad To You (with Normani & Nicki Minaj)",
-                artist: "Ariana Grande",
-                src: "songs/Bad To You (with Normani & Nicki Minaj).mp3"
+                title: "Busy Woman",
+                artist: "Sabrina Carpenter",
+                src: "spotify-songs/SpotiDownloader.com - tanya (1)/Busy Woman.mp3",
+                albumImage: "pics/pt7.jpg",
+                story: "OH HEYYYY. Another fact ! I love love love the fact that you are the busiest woman i know fr. Internship, school, RA, social relationships, family, you know how to balance it all. You are so strong and committed to the goals in your life that you will do everything that you can to get there and nothing stops you fr. This pic is from you eating lunch in your break from you j*b. And also this song reminds me of that tiktok you made with your FOX outfits!!! Wish I was still able to see that lawl. You were always fitted up and knew how to look presentable. yum. anyways enjoy this song and ONTO NEXT SONG!!!!!"
             },
             {
-                title: "Bang Bang",
-                artist: "Ariana Grande",
-                src: "songs/Bang Bang.mp3"
+                title: "UP!",
+                artist: "LoveRance, Iamsu!, Skipper",
+                src: "spotify-songs/SpotiDownloader.com - tanya (1)/SpotiDown.App - UP_ _Beat The P_ssy UP_ _Street_ - LoveRance.mp3",
+                albumImage: "pics/pt8.JPEG",
+                story: "OSHITTTTT WE GETTING FREAKY IN THIS BIHHHHH. Nah jk but I think you know why I put this historical masterpiece in this playlist 🫣. It was the song for the pre. And the song that we always look at each other or text each other to let each other know that it is playing wherever it is playing lmfaoo. idk if that sentence made sense but regardless i just want you to know to beat that pussy up up up up up up. Anyways this pic is from a pre beating tf out of usman for some reason lmfaoo . enjoy!!! onto the next madame…"
             },
             {
-                title: "bloodline",
-                artist: "Ariana Grande",
-                src: "songs/bloodline.mp3"
+                title: "NOKIA",
+                artist: "Drake",
+                src: "spotify-songs/SpotiDownloader.com - tanya (1)/NOKIA.mp3",
+                albumImage: "pics/pt9.jpg",
+                story: "i guess its pregame vibezzz cuz we playing all them bangers and this one is coming from DRIZZY DRAKEEE. WHEN THIS PLAYS I just look at you and sing every lyric that I know and even don't know by just saying random words and sounds. Cuz you was my babygorlll. Anyways it gives mad nostalgic vibes of when I used to visit you and winter cold times and when we would be cuddled up together. And ofc I had to put a picture with you in my drizzy drake sweatshirt. Also that ice cream was gas. Anyways ima @ you like bless me, hit the dance floor, get nasty, impress me (not me… yourself cuz you are an independent woman). anyways if you've skipped songs don't for this cuz it's a banger… anyways into the next !!!!"
             },
             {
-                title: "break up with your girlfriend, i'm bored",
-                artist: "Ariana Grande",
-                src: "songs/break up with your girlfriend, i'm bored.mp3"
+                title: "Dark Thoughts",
+                artist: "Lil Tecca",
+                src: "spotify-songs/SpotiDownloader.com - tanya (1)/Dark Thoughts.mp3",
+                albumImage: "pics/pt10.jpg",
+                story: "This song reminds me of this ONE SPECIFIC MOMENT WITH YOU. I was getting ready to meet w Johann and I was stressed asfff about getting to New Jersey on time cuz this dude was so late. But I remember exactly this… you were like calm down, go take a shower, get ready, and I will figure this transportation out for you. Oh my GAWDDDDDD. THAT WAS YOUR PLAN. YOU WANTED ME TO GET DOWN ON ONE KNEE RIGHT THEN AND THERE. anyways, I did exactly that. I took a shower, and I was belting out this song in the shower which made you and Taran laugh lol. I don't really like this pic of myself but it was the only one that kinda related to this moment cuz it was the FIFA volunteer thing. Anyways KNOW MY (girl) SO BAD so enjoy the rest of the song and see you on the next !!!"
             },
             {
-                title: "Break Your Heart Right Back",
-                artist: "Ariana Grande",
-                src: "songs/Break Your Heart Right Back.mp3"
+                title: "Bailalo Rocky",
+                artist: "Yoan Retro, Ariadne Arana, GMBeats Degranalo",
+                src: "spotify-songs/SpotiDownloader.com - tanya (1)/Bailalo Rocky.mp3",
+                albumImage: "pics/pt11.JPEG",
+                story: "So this song was a song I got put on during our break. I was blasting this before my Apple interview. Blasting this as my entrance song for my jiu jitsu match and realized that everything I was posting was purely so that you could see it. I quickly realized that I just wanted you to see me succeed. But even when it was looking like I was \"succeeding\", nothing meant much when I couldn't share that with you by my side. Anyways this a hype song so ima change up the tone rq. BÁILALO! Shake them dreads! and enjoy. Can't wait for the next! WHAT IS IT GOING TO BE ???!!!"
             },
             {
-                title: "Dangerous Woman",
-                artist: "Ariana Grande",
-                src: "songs/Dangerous Woman.mp3"
+                title: "Turn Heads",
+                artist: "Dem Franchize Boyz, Lloyd",
+                src: "spotify-songs/SpotiDownloader.com - tanya (1)/Turn Heads.mp3",
+                albumImage: "pics/pt12.jpg",
+                story: "OSHIT ITS YOUNG LLOYD AND DEM FRANCHIZE BOYS. WE FUCKING GETTING LITTTTT IN THIS PIMPED OUT CHEVROLEEETTT. I remember your post with this song bru. I WAS LIKE COME HERE RIGHT NOW BARK BARK BARK BARK BARK. Anyways, with a sexy song comes a sexy pic. So enjoy this night of us getting sexy and having a sexy time at the sexy dance floor in this sexy night. Enjoy this hype song. And get ready to slow it downnnn realll smoootthh."
             },
             {
-                title: "Get On Your Knees",
-                artist: "Ariana Grande",
-                src: "songs/Get On Your Knees.mp3"
+                title: "I Can't Wait To Get There",
+                artist: "The Weeknd",
+                src: "spotify-songs/SpotiDownloader.com - tanya (1)/I Can't Wait To Get There.mp3",
+                albumImage: "pics/pt13.jpg",
+                story: "Im in space Tanya. Help me. Im floating. Drag me down. I can't wait to get there (back to earth #get it). Anyways, we both were like this song is actually mad good wtf. So I thought it was cute how we discovered a song together lawl. I'm pretty sure we discovered it the night we went to eat Ramen. Correct me if i'm wrong. But yea, I didn't realize The Weeknd, in a cool calm dark night, Asian street racing good vibes was in the mix type. It all blended together I guess. Anyways, I play this song at work all the time and I can't bother but to just think about this night with you. So just wanted you to know that I still think about you every single second regardless of where I'm at. Enjoy + next."
             },
             {
-                title: "God is a woman",
-                artist: "Ariana Grande",
-                src: "songs/God is a woman.mp3"
+                title: "Darling, I (feat. Teezo Touchdown)",
+                artist: "Tyler, the Creator, Teezo Touchdown",
+                src: "spotify-songs/SpotiDownloader.com - tanya (1)/Darling, I (feat. Teezo Touchdown).mp3",
+                albumImage: "pics/pt14.jpg",
+                story: "TYLERRR NIGHTTT. You look like a model promoting tequila and earning them millions of dollars with this pic lmao. Anyways, I loved this night and sharing it with you. I had an amazing time sharing one of my favorite artists with you and us belting out every single lyric, screaming at every single album cover he was showing, and not giving a fuck about what the people around us was thinking lmfao. We prolly looked a lil crazy but we were in our own little bubble and it was just us vs. the whole world fr. Anyways FOREVER IS NOT TOO LONG, it is exactly pin point picture-perfect just right. Anyways ENJOY or not, I won't judge judy. NEXT SONGGGGG!!!!"
             },
             {
-                title: "Greedy",
-                artist: "Ariana Grande",
-                src: "songs/Greedy.mp3"
-            },
-            {
-                title: "Honeymoon Avenue",
-                artist: "Ariana Grande",
-                src: "songs/Honeymoon Avenue.mp3"
-            },
-            {
-                title: "How I Look On You",
-                artist: "Ariana Grande",
-                src: "songs/How I Look On You.mp3"
-            },
-            {
-                title: "in my head",
-                artist: "Ariana Grande",
-                src: "songs/in my head.mp3"
-            },
-            {
-                title: "just like magic",
-                artist: "Ariana Grande",
-                src: "songs/just like magic.mp3"
-            },
-            {
-                title: "Let Me Love You",
-                artist: "Ariana Grande",
-                src: "songs/Let Me Love You.mp3"
-            },
-            {
-                title: "love language",
-                artist: "Ariana Grande",
-                src: "songs/love language.mp3"
-            },
-            {
-                title: "make up",
-                artist: "Ariana Grande",
-                src: "songs/make up.mp3"
-            },
-            {
-                title: "motive (with Doja Cat)",
-                artist: "Ariana Grande",
-                src: "songs/motive (with Doja Cat).mp3"
-            },
-            {
-                title: "nasty",
-                artist: "Ariana Grande",
-                src: "songs/nasty.mp3"
-            },
-            {
-                title: "Nobody (with Chaka Khan)",
-                artist: "Ariana Grande",
-                src: "songs/Nobody (with Chaka Khan).mp3"
-            },
-            {
-                title: "obvious",
-                artist: "Ariana Grande",
-                src: "songs/obvious.mp3"
-            },
-            {
-                title: "positions",
-                artist: "Ariana Grande",
-                src: "songs/positions.mp3"
-            },
-            {
-                title: "R.E.M",
-                artist: "Ariana Grande",
-                src: "songs/R.E.M.mp3"
-            },
-            {
-                title: "Rain On Me (with Ariana Grande)",
-                artist: "Lady Gaga & Ariana Grande",
-                src: "songs/Rain On Me (with Ariana Grande).mp3"
-            },
-            {
-                title: "Right There",
-                artist: "Ariana Grande",
-                src: "songs/Right There.mp3"
-            },
-            {
-                title: "safety net (feat. Ty Dolla $ign)",
-                artist: "Ariana Grande",
-                src: "songs/safety net (feat. Ty Dolla $ign).mp3"
-            },
-            {
-                title: "shut up",
-                artist: "Ariana Grande",
-                src: "songs/shut up.mp3"
-            },
-            {
-                title: "successful",
-                artist: "Ariana Grande",
-                src: "songs/successful.mp3"
-            },
-            {
-                title: "sweetener",
-                artist: "Ariana Grande",
-                src: "songs/sweetener.mp3"
-            },
-            {
-                title: "the boy is mine",
-                artist: "Ariana Grande",
-                src: "songs/the boy is mine.mp3"
-            },
-            {
-                title: "the light is coming (feat. Nicki Minaj)",
-                artist: "Ariana Grande",
-                src: "songs/the light is coming (feat. Nicki Minaj).mp3"
-            },
-            {
-                title: "Touch It",
-                artist: "Ariana Grande",
-                src: "songs/Touch It.mp3"
-            },
-            {
-                title: "true story",
-                artist: "Ariana Grande",
-                src: "songs/true story.mp3"
-            },
-            {
-                title: "west side",
-                artist: "Ariana Grande",
-                src: "songs/west side.mp3"
-            },
-            {
-                title: "worst behavior",
-                artist: "Ariana Grande",
-                src: "songs/worst behavior.mp3"
-            },
-            {
-                title: "yes, and?",
-                artist: "Ariana Grande",
-                src: "songs/yes, and?.mp3"
-            },
-            {
-                title: "You Don't Know Me",
-                artist: "Ariana Grande",
-                src: "songs/You Don't Know Me.mp3"
+                title: "All I Can Say",
+                artist: "Kali Uchis",
+                src: "spotify-songs/SpotiDownloader.com - tanya (1)/All I Can Say.mp3",
+                albumImage: "pics/pt15.JPG",
+                story: "My favorite crash out SONGGG!!! Anyways while stalking your profile and seeing your gorgeous pretty little thang with this song. I was like fuckkkkk, pointed a gun to my jaw, Loaded up the gun, and realized that it's okay cuz I'm bound to see her again the day after your grad lol. Kali Uchis is right there next to Tyler in favorite artists. And this song shows exactly why, cuz she's an amazing singer and it reminds me of an amazing post on your insta. And finally, we reached the very end of this short playlist. As you saw, I just wanted to show you the different songs that remind me of you, the different times that connect me to those songs, and take you on a journey one more time. I am ready to love on you Tanya. and I'm ready to do it loud and proud. With nuclear bombs (fireworks) exploding all around us as Kali Uchis plays in the background (or in our heads). Anyways, before you ended things, I bought something. which comes from the question that I was going to ask in the very beginning of this playlist. And it's if you would like to go to the Kali Uchis concert with me on September 11th, 2025 @ 8:00PM. I wanted to surprise you with these but it didn't end up working. So, if you want to, I would like to at least not let these tickets go to waste and go with you. I know all you wanted is someone to love you hard and loud. And it is fair that it isn't much to ask. So, this is my attempt in doing that. I have more plans on what to do in person with you. But. Do to the circumstances right now, this is the only thing I could think of on doing for you right now. Creating a mini playlist and tell you all the reasons why you are amazing to me. Took me many days. And hours of debugging. Especially connecting to the fuck ass Spotify API. But after 1000+ lines of code later, it seems like it ended up working in the end. And I hope to GOD it is not buggy on your computer. Anyways. you have my number. Or if you deleted it it's (631)805-7596. Hope to hear from you soon. And if I don't then it is okay! I got my answer from that. Anyways, ALL I CAN SAY (get it) is I hope you enjoyed the journey I took you in. Have a good day/night/whenever I gain the courage to send this. You will forever be in my heart Tanya."
             }
         ];
 
@@ -236,9 +132,21 @@ class MusicPlayer {
     }
 
     init() {
+        this.setupStartScreen();
         this.loadTrack(this.currentTrack);
         this.bindEvents();
         this.setVolume(50);
+    }
+
+    setupStartScreen() {
+        const startButton = document.getElementById('startButton');
+        const startScreen = document.getElementById('startScreen');
+        const musicPlayer = document.getElementById('musicPlayer');
+
+        startButton.addEventListener('click', () => {
+            startScreen.style.display = 'none';
+            musicPlayer.style.display = 'block';
+        });
     }
 
     bindEvents() {
@@ -353,11 +261,11 @@ class MusicPlayer {
         // Update volume icon based on level
         const volumeIcon = document.querySelector('.volume-icon');
         if (volume == 0) {
-            volumeIcon.textContent = '🔇';
+            volumeIcon.textContent = '🤍';
         } else if (volume < 50) {
-            volumeIcon.textContent = '🔉';
+            volumeIcon.textContent = '💕';
         } else {
-            volumeIcon.textContent = '🔊';
+            volumeIcon.textContent = '💗';
         }
     }
 
@@ -402,18 +310,28 @@ class MusicPlayer {
 
     flipAlbumCover() {
         this.albumCover.classList.toggle('flipped');
+        
+        // Hide the clickable hint after first click
+        if (!this.albumClickedOnce) {
+            const clickableHint = document.querySelector('.clickable-hint');
+            if (clickableHint) {
+                clickableHint.style.display = 'none';
+            }
+            this.albumClickedOnce = true;
+        }
     }
 
     updateAlbumCover(trackIndex) {
-        // You can customize this to show different images for different tracks
-        // For now, we'll keep the same image but you can extend this
         const track = this.tracks[trackIndex];
         
         // Reset flip state when changing tracks
         this.albumCover.classList.remove('flipped');
         
-        // You can add logic here to change album image based on track
-        // this.albumImage.src = `pics/${track.albumImage}`;
+        // Update album image for current track
+        this.albumImage.src = track.albumImage;
+        
+        // Update the back text with the story
+        this.backText.innerHTML = track.story;
     }
 }
 
