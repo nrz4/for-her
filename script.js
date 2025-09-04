@@ -33,7 +33,7 @@ class MusicPlayer {
                 artist: "Ariana Grande",
                 src: "spotify-songs/SpotiDownloader.com - tanya (1)/Sometimes.mp3",
                 albumImage: "pics/pt2.jpg",
-                story: "Oh Ariana Grande. You favorite artist! And one of my favorite songs. I remember when we went on a break, this is the song I blasted in my eardrums when I would be driving and at the gym. Throughout that whole break, you never left my mind (not even sometimes haha). I knew from that that you weren't some girl that I met, you were someone I saw forever with ever since that first date (which is what the pic is in case you forgot). Probably my favorite date I have ever been in. With those fuck ass gigantic ass big booty ass drinks. Everything was hectic but with you everything seemed so calm and amazing. Anyways, enjoy Arianna's angelic voice. Collect these moments. Create them as tattoos on your mind. And get ready for the next song!!!"
+                story: "Oh Ariana Grande. Your favorite artist! And one of my favorite songs. I remember when we went on a break, this is the song I blasted in my eardrums when I would be driving and at the gym. Throughout that whole break, you never left my mind (not even sometimes haha). I knew from that that you weren't some girl that I met, you were someone I saw forever with ever since that first date (which is what the pic is in case you forgot). Probably my favorite date I have ever been in. With those fuck ass gigantic ass big booty ass drinks. Everything was hectic but with you everything seemed so calm and amazing. Anyways, enjoy Arianna's angelic voice. Collect these moments. Create them as tattoos on your mind. And get ready for the next song!!!"
             },
             {
                 title: "Loco",
@@ -339,6 +339,9 @@ class MusicPlayer {
         
         // Update the back text with the story
         this.backText.innerHTML = track.story;
+        
+        // Scroll text box to top when changing songs
+        this.backText.scrollTop = 0;
     }
 }
 
