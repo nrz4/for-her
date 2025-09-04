@@ -26,7 +26,7 @@ class MusicPlayer {
                 artist: "Don Toliver, Wizkid",
                 src: "spotify-songs/SpotiDownloader.com - tanya (1)/Slow Motion (feat. Wizkid).mp3",
                 albumImage: "pics/pt1.jpg",
-                story: "Grand Rising Tanya! You prolly like what the fuck is this. And honestly Idk what I'm really doing either. But all I know is that this is my grand way of asking you a question! But unfortunately you are going to have to wait till the end. Until we get there… I coded this project up for you because I just wanted to take you on a journey through some songs. Talk a little about them and create a beautiful story. I wanted to start with Slow Motion because it was the song that you put me on very very very early on. When we first met. I don't know if it was from a story or reel, but all I knew is that I loved this song because you did. Just like the flowers in the pic! It was also the very first set of flowers I gave you. Aka the start of everything. Hope you enjoy and onto the next song!!!"
+                story: "Hey Tanya!... you prolly like what the fuck is this. And honestly Idk what I'm really doing either. But I just want you to keep an open mind... and go into this with good vibes. So please smile. Are you smiling? I hope so. Anyways, this is my grand way of asking you a question! But unfortunately you are going to have to wait till the end. Until we get there… I coded this project up for you because I just wanted to take you on a journey through some songs. Talk a little about them and create a beautiful story. I wanted to start with Slow Motion because it was the song that you put me on very very very early on. When we first met. I don't know if it was from a story or reel, but all I knew is that I loved this song because you did. Just like the flowers in the pic! It was also the very first set of flowers I gave you. Aka the start of everything. Hope you enjoy and onto the next song!!!"
             },
             {
                 title: "Sometimes",
@@ -314,11 +314,15 @@ class MusicPlayer {
     flipAlbumCover() {
         this.albumCover.classList.toggle('flipped');
         
-        // Hide the clickable hint after first click
+        // Hide the clickable hint and instructions after first click
         if (!this.albumClickedOnce) {
             const clickableHint = document.querySelector('.clickable-hint');
+            const instructions = document.getElementById('instructions');
             if (clickableHint) {
                 clickableHint.style.display = 'none';
+            }
+            if (instructions) {
+                instructions.style.display = 'none';
             }
             this.albumClickedOnce = true;
         }
