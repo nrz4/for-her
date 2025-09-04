@@ -211,10 +211,13 @@ class MusicPlayer {
     }
 
     previousTrack() {
-        this.currentTrack = this.currentTrack > 0 ? this.currentTrack - 1 : this.tracks.length - 1;
-        this.loadTrack(this.currentTrack);
-        if (this.isPlaying) {
-            this.play();
+        // Don't go to last song if on first song
+        if (this.currentTrack > 0) {
+            this.currentTrack = this.currentTrack - 1;
+            this.loadTrack(this.currentTrack);
+            if (this.isPlaying) {
+                this.play();
+            }
         }
     }
 
